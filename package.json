@@ -1,0 +1,30 @@
+{
+    "name": "ci",
+    "version": "1.0.0",
+    "main": "index.js",
+    "scripts": {
+        "format": "prettier . --write",
+        "format:check": "prettier . --check",
+        "lint": "eslint .",
+        "lint:fix": "eslint . --fix",
+        "start": "node server.js",
+        "docker:build": "docker build -t cicd .",
+        "docker:run": "docker run -p 3000:3000 --init --rm cicd",
+        "test": "jest"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "description": "",
+    "dependencies": {
+        "express": "^5.3.0"
+    },
+    "devDependencies": {
+        "@eslint/js": "^10.0.1",
+        "eslint": "^10.14.0",
+        "globals": "^17.14.0",
+        "jest": "^30.5.2",
+        "prettier": "3.9.10",
+        "supertest": "^7.3.1"
+    }
+}
